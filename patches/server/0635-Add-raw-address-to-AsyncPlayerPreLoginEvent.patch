@@ -5,10 +5,10 @@ Subject: [PATCH] Add raw address to AsyncPlayerPreLoginEvent
 
 
 diff --git a/src/main/java/net/minecraft/server/network/ServerLoginPacketListenerImpl.java b/src/main/java/net/minecraft/server/network/ServerLoginPacketListenerImpl.java
-index ed9c4a8e377867771d8376c485f56c6bd234192b..71614fb07ba771ec9a00772074b031b77210d425 100644
+index 341769546bb9992655a43a3563e22714c01c103e..b97c9336489099303e61c37889565c80fc78703a 100644
 --- a/src/main/java/net/minecraft/server/network/ServerLoginPacketListenerImpl.java
 +++ b/src/main/java/net/minecraft/server/network/ServerLoginPacketListenerImpl.java
-@@ -414,12 +414,13 @@ public class ServerLoginPacketListenerImpl implements ServerLoginPacketListener
+@@ -416,12 +416,13 @@ public class ServerLoginPacketListenerImpl implements ServerLoginPacketListener
                              // Paper end
                          String playerName = ServerLoginPacketListenerImpl.this.gameProfile.getName();
                          java.net.InetAddress address = ((java.net.InetSocketAddress) ServerLoginPacketListenerImpl.this.connection.getRemoteAddress()).getAddress();
