@@ -9,15 +9,4 @@ pluginManagement {
 
 rootProject.name = "paper"
 
-for (name in listOf("Paper-API", "Paper-Server", "Paper-MojangAPI")) {
-    val projName = name.toLowerCase(Locale.ENGLISH)
-    include(projName)
-    findProject(":$projName")!!.projectDir = file(name)
-}
-
-val testPlugin = file("test-plugin.settings.gradle.kts")
-if (testPlugin.exists()) {
-    apply(from = testPlugin)
-} else {
-    testPlugin.writeText("// Uncomment to enable the test plugin module\n//include(\":test-plugin\")\n")
-}
+include("Paper-API", "Paper-Server", "Paper-MojangAPI")
