@@ -38,4 +38,8 @@ jobs:
                 path: |
                   ${{ github.workspace }}/paper/build/paper-server.jar
                   ${{ github.workspace }}/paper/build/libs/paper-server.jar
-                  ${{ github.workspace }}/paper/paper-server.jar
+                  ${{ github.workspace }}paper-server.jar
+            - uses: actions/upload-artifact@v2
+               with:
+                 name: Tuinity-JDK${{ matrix.java }}
+                 path: tuinity-paperclip.jar
