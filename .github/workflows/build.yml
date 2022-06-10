@@ -31,3 +31,8 @@ jobs:
                   git config --global user.name "Github Actions"
                   ./gradlew applyPatches --stacktrace
                   ./gradlew build --stacktrace
+            - name: Upload a Build Artifact
+              uses: actions/upload-artifact@v3
+              with:
+                name: Jar
+                path: jar/build/libs/TAB-**.jar
