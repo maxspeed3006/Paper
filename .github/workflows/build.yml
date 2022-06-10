@@ -34,15 +34,8 @@ jobs:
             - name: Upload a Build Artifact
               uses: actions/upload-artifact@v3
               with:
-                name: Jar
-                path: build/paperbeta.jar
-            - name: Upload a Build Artifact2
-              uses: actions/upload-artifact@v3
-              with:
-                name: Jar
-                path: jar/build/paperbeta.jar
-            - name: Upload a Build Artifact2
-              uses: actions/upload-artifact@v3
-              with:
-                name: Jar
-                path: ./build/paperbeta.jar
+                name: paperbeta
+                path: |
+                  ${{ github.workspace }}/paper/build/paper-server.jar
+                  ${{ github.workspace }}/paper/build/libs/paper-server.jar
+                  ${{ github.workspace }}/paper/paper-server.jar
