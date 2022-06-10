@@ -35,4 +35,14 @@ jobs:
               uses: actions/upload-artifact@v3
               with:
                 name: Jar
-                path: jar/build/libs/TAB-**.jar
+                path: build/paperbeta.jar
+            - name: Upload a Build Artifact2
+              uses: actions/upload-artifact@v3
+              with:
+                name: Jar
+                path: jar/build/paperbeta.jar
+            - name: Upload a Build Artifact2
+              uses: actions/upload-artifact@v3
+              with:
+                name: Jar
+                path: ./build/paperbeta.jar
