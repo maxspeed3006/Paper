@@ -40,6 +40,6 @@ jobs:
                   ${{ github.workspace }}/paper/build/libs/paper-server.jar
                   ${{ github.workspace }}paper-server.jar
             - uses: actions/upload-artifact@v2
-               with:
-                 name: paper-server
-                 path: paper-server.jar
+              with:
+                name: paper-server
+                path: paper-server.jar
